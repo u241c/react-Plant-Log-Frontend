@@ -38,6 +38,53 @@ section{
   justify-content: center;
   align-items: center;
 }
-body {
-  background-color: blue;
+
+div h2{
+  font-size: 35px;
+  font-stretch-absolute: 500%;
+  color: white;
+  line-height: 5;
+  font-family: cursive;
+  text-shadow: 2.6px 1px 1px rgb(109, 26, 65);
+  
 }
+
+span{
+  font-family: cursive;
+  color:burlywood;
+  text-align: right;
+  text-shadow: 2.6px 1px 1px rgb(109, 26, 65);
+  
+}
+
+p span{
+  color: burlywood;
+  text-shadow: 2.6px 1px 1px rgb(109, 26, 65);
+  display: flex;
+  
+}
+
+button {
+  color: burlywood;
+  text-shadow: 1.7px 1px 1px rgb(207, 155, 87);
+  font-weight: bolder;
+  margin: 0px 110px;
+}
+
+article {
+  
+  color:burlywood;
+  text-shadow: 2.3px 1px 1px rgb(19, 54, 54);
+}
+
+
+body {
+  background-image: linear-gradient(to right, #5a3f37 , #2c7744);
+}
+
+.section-head {
+  background-image: url("./images/bg_image.png");
+  background-size: cover;
+	background-repeat: no-repeat;
+}
+

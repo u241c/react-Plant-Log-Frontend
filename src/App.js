@@ -3,12 +3,15 @@ import './App.css';
 
 
 
+
+
 export default function App() {
+  // this is use state defintion
   const [state, setState] = useState({
-    plants: [{ plant: "JavaScript", cycle: "4" }],
+    plants: [],
     newPlant: {
       plant: "",
-      cycle: "3",
+      cycle: "🌷",
     },
   });
 
@@ -47,7 +50,7 @@ export default function App() {
       plants: [...prevState.plants, prevState.newPlant],
       newPlant: {
         plant: "",
-        cycle: "3",
+        cycle: "🌷",
       },
     }));
   }
@@ -63,9 +66,15 @@ export default function App() {
   }
 
   return (
-    <section>
-      <h2>PLANT LOG</h2>
+    
+    <section >
+      <div className="section-head"></div>
+       {/* <img src="images/bg_image.png">  */}
+      <div>
+      <h2>Plant Type</h2>
+      </div>
       <hr />
+      {/* the output */}
       {state.plants.map((s) => (
         <article key={s.plant}>
           <div>{s.plant}</div> 
@@ -77,16 +86,18 @@ export default function App() {
         <label>
           <span>PLANT</span>
           <input name="plant" value={state.newPlant.plant} onChange={handleChange} />
-        </label>
+        </label><br></br>
         <label>
+          <p>
           <span>CYCLE</span>
           <select name="cycle" value={state.newPlant.cycle} onChange={handleChange} >
             <option value="Annual">a</option>
             <option value="Perrenial">p</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="🌷">🌷</option>
+            {/* <option value="4">4</option>
+            <option value="5">5</option> */}
           </select>
+          </p>
         </label>
         <button>ADD PLANT</button>
       </form>
