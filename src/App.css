@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -9,7 +9,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 .App-header {
   background-color: #282C34;
    min-height: 100vh; 
@@ -20,7 +20,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-link {
+/* .App-link {
   color: #61DAFB;
 }
 @keyframes App-logo-spin {
@@ -30,7 +30,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 section{
   display: flex;
@@ -41,7 +41,7 @@ section{
 
 div h2{
   font-size: 35px;
-  font-stretch-absolute: 500%;
+  /* font-stretch-absolute: 500%; */
   color: white;
   line-height: 5;
   font-family: cursive;
@@ -78,13 +78,14 @@ article {
 }
 
 
-body {
+ body {
   background-image: linear-gradient(to right, #5a3f37 , #2c7744);
-}
+} 
 
 .section-head {
   background-image: url("./images/bg_image.png");
   background-size: cover;
 	background-repeat: no-repeat;
+  flex-grow: 1;
 }
 

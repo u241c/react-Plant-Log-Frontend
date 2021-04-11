@@ -53,6 +53,7 @@ export default function App() {
         cycle: "🌷",
       },
     }));
+    window.location.reload()
   }
 
   function handleChange(e) {
@@ -65,12 +66,30 @@ export default function App() {
     })) 
   }
 
+
+  async function handleDelete(plantId) {
+    // if(!state.user) return; 
+    const URL = `http://localhost:3001/api/plants/${plantId}`;
+
+    const plants = await fetch(URL, {
+      method: 'DELETE'
+    }).then(res => res.json());
+
+    setState(prevState => ({
+      ...prevState,
+      plants,
+    }))
+}
+
   return (
     
     <section >
-      <div className="section-head"></div>
-       {/* <img src="images/bg_image.png">  */}
-      <div>
+      {/* <div>
+      <img src="./images/bg_image.png">
+      </div> */}
+      <div className="section-head">
+       
+     
       <h2>Plant Type</h2>
       </div>
       <hr />
@@ -79,6 +98,8 @@ export default function App() {
         <article key={s.plant}>
           <div>{s.plant}</div> 
           <div>{s.cycle}</div>
+          <div onClick={() => handleDelete(s._id)}>{'🗑'}</div>
+          
         </article>
       ))}
       <hr />
@@ -96,10 +117,11 @@ export default function App() {
             <option value="🌷">🌷</option>
             {/* <option value="4">4</option>
             <option value="5">5</option> */}
-          </select>
+          </select>         
           </p>
         </label>
         <button>ADD PLANT</button>
+        
       </form>
     </section>
   );
