@@ -17,7 +17,7 @@ export default function App() {
 
   async function getAppData() {
     try {
-      const BASE_URL = 'http://localhost:3001/api/plants';
+      const BASE_URL = 'https://backend-plant-log.herokuapp.com/api/plants';
       const plants = await fetch(BASE_URL).then(res => res.json());
       setState((prevState) => ({
         ...prevState,
@@ -35,7 +35,7 @@ export default function App() {
   async function addPlant(e) {
     e.preventDefault();
     
-    const BASE_URL = 'http://localhost:3001/api/plants';
+    const BASE_URL = 'https://backend-plant-log.herokuapp.com/api/plants';
     
     const plant = await fetch(BASE_URL, {
       method: 'POST',
@@ -69,7 +69,7 @@ export default function App() {
 
   async function handleDelete(plantId) {
     // if(!state.user) return; 
-    const URL = `http://localhost:3001/api/plants/${plantId}`;
+    const URL = `https://backend-plant-log.herokuapp.com/api/plants/${plantId}`;
 
     const plants = await fetch(URL, {
       method: 'DELETE'
