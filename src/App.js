@@ -94,14 +94,14 @@ export default function App() {
       </div>
       <hr />
       {/* the output */}
-      {state.plants.map((s) => (
+      {state.plants ? state.plants.map((s) => (
         <article key={s.plant}>
           <div>{s.plant}</div> 
           <div>{s.cycle}</div>
           <div onClick={() => handleDelete(s._id)}>{'🗑'}</div>
           
         </article>
-      ))}
+      )):null}
       <hr />
       <form onSubmit={addPlant}>
         <label>
