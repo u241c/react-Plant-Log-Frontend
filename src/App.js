@@ -53,7 +53,7 @@ export default function App() {
         cycle: "🌷",
       },
     }));
-    window.location.reload()
+     window.location.reload()
   }
 
   function handleChange(e) {
@@ -80,7 +80,7 @@ export default function App() {
       plants,
     }))
 }
-
+console.log(state);
   return (
     
     <section >
@@ -94,7 +94,7 @@ export default function App() {
       </div>
       <hr />
       {/* the output */}
-      {state.plants ? state.plants.map((s) => (
+      {state.plants.length ? state.plants.map((s) => (
         <article key={s.plant}>
           <div>{s.plant}</div> 
           <div>{s.cycle}</div>
