@@ -122,7 +122,15 @@ console.log(state);
         </label>
         <button>ADD PLANT</button>
         
+        <footer className="footer">
+        <p>&copy; Plant Log 2021</p>
+      </footer>
+      
       </form>
-    </section>
+</section>
+    
+    
+
+
   );
 }
