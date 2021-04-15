@@ -92,7 +92,7 @@ console.log(state);
      
       <h2>Plant Type</h2>
       </div>
-      <hr />
+      <div />
       {/* the output */}
       {state.plants.length ? state.plants.map((s) => (
         <article key={s.plant}>
@@ -102,7 +102,7 @@ console.log(state);
           
         </article>
       )):null}
-      <hr />
+      <div />
       <form onSubmit={addPlant}>
         <label>
           <span>PLANT</span>
