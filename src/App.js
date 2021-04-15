@@ -84,13 +84,8 @@ console.log(state);
   return (
     
     <section >
-      {/* <div>
-      <img src="./images/bg_image.png">
-      </div> */}
       <div className="section-head">
-       
-     
-      <h2>Plant Type</h2>
+       <h2>Plant Type</h2>
       </div>
       <div />
       {/* the output */}
@@ -115,8 +110,7 @@ console.log(state);
             <option value="Annual">a</option>
             <option value="Perrenial">p</option>
             <option value="🌷">🌷</option>
-            {/* <option value="4">4</option>
-            <option value="5">5</option> */}
+            
           </select>         
           </p>
         </label>
